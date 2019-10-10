@@ -1,0 +1,70 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+int main()
+{
+	int x, y, z, ny, nz, rp,lp;
+	printf("vvedit znachenya x: 1 abo 0 \n");
+	cin >> x ;
+	if (x != 1 && x != 0) {
+		printf("Error!!!,vy vvely nepravylne znachennya x \n");
+	}
+	else {
+		printf("vvedit znachenya y: 1 abo 0 \n");
+		cin >> y;
+		if (y != 1 && y != 0) {
+			printf("Error!!!,vy vvely nepravylne znachennya y \n");
+		}
+		else {
+			printf("vvedit znachenya z: 1 abo 0 \n");
+			cin >> z;
+			if (z != 1 &&z != 0) {
+				printf("Error!!!,vy vvely nepravylne znachennya z \n");
+			}
+			else {
+				if (y == 1) {
+					ny = 0;
+				}
+				else {
+					ny = 1;
+				}
+				if (z == 1) {
+					nz = 0;
+				}
+				else {
+					nz = 1;
+				}
+				if (x || ny == 1) {
+					lp = 1;
+				}
+				else {
+					lp = 0;
+				}
+				if (y == 1 && nz == 1) {
+					if (x || y == 1) {
+						rp = 1;
+					}
+					else {
+						rp = 0;
+					}
+				}
+				else {
+					rp = 1;
+				}
+				if (rp == 1) {
+					if (lp == 1) {
+						printf("Vidpovid: True\n");
+					}
+					else {
+						printf("Vidpovid: False\n");
+					}
+				}
+				else {
+					printf("Vidpovid: True\n");
+				}
+			}
+		}
+	}
+}
